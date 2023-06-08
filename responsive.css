@@ -1,0 +1,340 @@
+
+@media(max-width: 1370px) {
+    h5 {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .cardHeadline p {
+        font-size: 14px;
+    }
+}
+
+
+
+@media(max-width: 1300px) {
+    #navScroll {
+        font-size: 14px;
+        margin-left: 0px;
+    }
+
+    .h5Right {
+        /* width: 150px; */
+        flex-wrap: wrap;
+    }
+
+    .sumPayContainer {
+        font-size: 14px;
+    }
+
+    .payButton {
+        font-size: 14px;
+    }
+
+    .gray {
+        font-size: 14px;
+    }
+
+    .cardMidline {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .footerFirstLine {
+        font-size: 12px;
+    }
+
+    .footerFirstLine a {
+        margin: 0 12px;
+    }
+
+    footer b {
+        font-size: 12px;
+    }
+
+    .lieferandoCopyright {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 1045px) {
+    #warenkorb2 {
+        display: block;
+        width: 30%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        overflow: auto;
+    }
+
+    #closeResposiveBasket {
+      display: none;
+    }
+}
+
+
+@media(max-width: 1045px) {
+    #warenkorb2 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background-color: white;
+        z-index: 100;
+    }
+
+    /* .dis-None {
+        display: none;
+    } */
+
+    .restaurant {
+        width: 100%;
+    }
+
+    #responsiveBtn {
+        display: block;
+    }
+
+    footer {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 100px;
+    }
+
+    footer a {
+        display: block;
+        padding: 12px;
+    }
+
+    footer b {
+        margin: 0 12px;
+        padding: 12px;
+    }
+
+    .lieferandoCopyright {
+        margin: 0 12px;
+        padding: 12px;
+    }
+
+    .h5Right {
+        flex-wrap: wrap;
+        /* margin-left: 107px; */
+    }
+
+    .cardHeadline p {
+        width: 85px;
+        text-align: end;
+    }
+
+    .h5Left {
+        width: 85px;
+    }
+}
+
+@media(max-width: 800px) {
+
+    header {
+        padding: 10px 50px;
+    }
+
+    .lieferung p {
+        font-size: 14px;
+    }
+
+    #navScroll {
+        font-size: 14px;
+    }
+
+    .cardMidline {
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 550px) {
+    h2 {
+        font-size: 16px;
+    }
+
+    .headerLogo {
+        height: 24px;
+    }
+
+    .swiss {
+        height: 24px;
+    }
+
+    .swiss img {
+        height: 24px !important;
+        width: 24px !important;
+    }
+
+    .hamburgerMenu {
+        height: 28px;
+    }
+
+    nav img {
+        height: 28px;
+    }
+
+    header {
+        padding: 6px 24px;
+    }
+
+    .headImg {
+        height: 200px;
+    }
+
+    .headerSmallLogo {
+        top: 180px;
+    }
+
+    .RestaurantNameRight img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .NavMenu img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .dishPlus img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .mainFoodImg img {
+        height: 150px;
+    }
+
+    .h5Right {
+        width: 200px;
+    }
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        margin-right: 24px;
+    }
+
+    h3 {
+        padding-bottom: 16px;
+    }
+
+    h4 {
+        margin-top: 0px;
+    }
+
+    .mainFoodImg {
+        margin: 20px 16px 8px 16px;
+    }
+
+    .foodName {
+        margin: 16px;
+    }
+
+    .foodDescripton {
+        margin: 12px;
+    }
+
+    .foodPrice {
+        margin: 16px;
+    }
+
+    .mainFoodImg img {
+        margin-top: 0;
+    }
+
+    .divPlus img {
+        margin: 11px;
+    }
+
+    .headerSmallLogo {
+        height: 64px;
+        width: 64px;
+        top: 188px;
+    }
+
+    .responsiveBtn button {
+        font-weight: bold;
+    }
+
+    .h5Left {
+        width: 40px;
+    }
+
+}
+
+@media(max-width: 420px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .headImg {
+        height: 150px;
+    }
+
+    .mainFoodImg img {
+        height: 100px;
+    }
+
+    .foodName {
+        font-size: 14px;
+    }
+
+    .foodDescripton {
+        font-size: 12px;
+    }
+
+    .foodPrice {
+        font-size: 14px;
+    }
+
+    .headerSmallLogo {
+        top: 138px
+    }
+
+    .NavMenu a {
+        margin-left: 0;
+        padding: 8px;
+        margin-left: 4px;
+    }
+
+    .swiss img {
+        margin-right: 12px;
+    }
+
+    .RestaurantNameRight img {
+        margin-left: 6px;
+    }
+
+    header {
+        padding: 6px 16px;
+    }
+}
+
+@media(max-width: 380px) {
+    .cardHeadline p {
+        margin-left: 6px;
+    }
+
+    .cardHeadline {
+        padding-bottom: 8px ;
+    }
+
+    .h5Right {
+        width: 140px;
+    }
+}

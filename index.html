@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="responsive.css">
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <title>Just Eat </title>
+        <link rel="icon" type="image/x-icon" href="./img/justEatlogo.png" />
+    </head>
+    <body onload="render(), load()">
+        <header>
+            <a href="index.html">
+                <img class="headerLogo" src="./img/justEat.png" alt="" />
+            </a>
+            <div>
+                <h2>Speisekarte</h2>
+            </div>
+            <nav>
+                <a class="swiss">
+                    <img
+                        src="./img/Switzerland-Swiss-Schweiz-Flag-Logo-Wappen.png"
+                        alt=""
+                    />
+                </a>
+                <a class="hamburgerMenu" href="index.html">
+                    <div>
+                        <img src="./img/menu.white.png" alt="" />
+                    </div>
+                </a>
+            </nav>
+        </header>
+
+        <div class="bodyContainer">
+            <section class="restaurant">
+                <img class="headImg" src="./img/pizza_regina_2.jpg" alt="" />
+                <div class="headerSmallLogo">
+                    <img src="./img/logo_lartista.png" alt="" />
+                </div>
+                <div class="RestaurantName">
+                    <h1>Ristorante Pizzeria L`Artista</h1>
+                    <div div class="RestaurantNameRight">
+                        <img src="./img/info.png" alt="" />
+                        <img
+                            onclick="likeRestaurant()"
+                            id="likeBtn"
+                            src="./img/heart.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <div class="headSection">
+                    <div class="bewertung">
+                        <div>
+                            <img src="./img/stern.png" alt="" />
+                            <img src="./img/stern.png" alt="" />
+                            <img src="./img/stern.png" alt="" />
+                            <img src="./img/stern.png" alt="" />
+                            <img src="./img/sternLeer.png" alt="" />
+                        </div>
+                        <div>
+                            <p class="gray small">1.8k Bewertungen</p>
+                        </div>
+                    </div>
+                    <div class="lieferung">
+                        <img src="./img/uhr.png" alt="" />
+                        <p>30-55 min</p>
+                        <p class="point">•</p>
+                        <img src="./img/bicycle-32.png" alt="" />
+                        <p class="green">kostenlos</p>
+                        <p class="point">•</p>
+                        <img src="./img/tasche (1).png" alt="" />
+                        <p>Min. 20.00 CHF</p>
+                    </div>
+
+                    <div id="nav" class="NavMenu">
+                        <img
+                            onclick="searchInput()"
+                            src="./img/lupe.png"
+                            alt=""
+                        />
+                        <div id="navScroll">
+                            <a href="#food">Beliebte Gerichte</a>
+                            <a href="#vorspeise">Vorspeisen</a>
+                            <a href="#salat">Salat</a>
+                            <a href="#food">Pizza</a>
+                            <a href="#pasta">Pasta</a>
+                            <a href="#fleischgerichte">Fleischgerichte</a>
+                            <a href="#dessert">Dessert</a>
+                        </div>
+
+                        <div id="openInputField" class="inputField dNone">
+                            <img
+                                class="inputLupe"
+                                src="./img/lupe.png"
+                                alt=""
+                            />
+                            <input
+                                onkeyup="filterMenuVorspeisen(), filterMenuSalat(), filterMenuPizza(), filterMenuPasta(), filterMenuFleischgerichte(), filterMenuDessert(), inputEmpty()"
+                                id="searchInput"
+                                type="text"
+                                placeholder="Suche nach Gerichten..."
+                            />
+                            <img
+                                onclick="closeInput(), renderVorspeisen(), renderSalat(), render()"
+                                class="inputKreuz"
+                                src="./img/close.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="vorspeise"></div>
+
+                <div id="salat"></div>
+
+                <div id="food"></div>
+
+                <div id="pasta"></div>
+
+                <div id="fleischgerichte"></div>
+
+                <div id="dessert"></div>
+            </section>
+            <section id="warenkorb2" class="dNone">
+                <h3>Warenkorb
+                    <img onclick="closeResposiveBasket()" id="closeResposiveBasket" class="closeResposiveBasket" src="./img/close.basket.png" alt="">
+                </h3>
+                <div id="warenkorb"></div>
+
+                <div id="warenkorbSumme"></div>
+
+            </section>
+
+        </div>
+
+        <footer>
+            <div class="footerFirstLine">
+                <a href="#">Ein Restaurant empfehlen</a>
+                <a href="#">Ein Restaurant anmelden</a>
+                <a href="#">Jobs</a>
+                <a href="#">AGB</a>
+                <a href="#">Datenschutzerklärung</a>
+                <a href="#">Impressum</a>
+                <a href="#">Verwendung von Cookies</a>
+                <a href="#">Bug Bounty</a>
+                <a href="#">Ethik-Hotline</a>
+            </div>
+            <div>
+                <p><b>Diese Seite dient zu Übungszwecken!</b></p>
+            </div>
+            <div>
+                <p class="lieferandoCopyright">© 2023 Lieferando</p>
+            </div>
+        </footer>
+
+        <div onclick="openResponsiveBtn()" id="responsiveBtn" class="dNone"></div>
+
+    </body>
+</html>
