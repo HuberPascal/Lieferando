@@ -176,7 +176,9 @@ function loadWarenkorb() {
 
     let warenkorb = document.getElementById('warenkorb');
     let warenkorbSumme = document.getElementById('warenkorbSumme');
+    let responsiveWarenkorb = document.getElementById('responsiveBtn');
     warenkorbSumme.innerHTML = '';
+    responsiveWarenkorb.innerHTML = '';
 
     if(renderEmptyBasket()) {
         warenkorb.innerHTML = /*html*/ `
@@ -188,6 +190,7 @@ function loadWarenkorb() {
             und bestelle dein Essen.
         </span>
         `;
+
     }else {
         renderBasket();
         updateShoppingBasket();
