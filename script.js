@@ -58,11 +58,45 @@ function renderFleischgerichte() {
 
 function renderDessert() {
     let foodcards = document.getElementById('dessert');
-    foodcards.innerHTML = renderDessertImg();
+    foodcards.innerHTML = renderDessertImg()
+    /*html*/ ` 
+    <div class="mainFoodImg">
+        <img src="./img/dessert.avif" alt="" />
+    </div>     
+
+    <h4>Dessert</h4>
+    `;
 
     for (let i = 0; i < dessert.length; i++) {
-        foodcards.innerHTML += renderDessertCards(i);
+        foodcards.innerHTML += /*html*/ `
+        <div onclick="addMenu('${dessert[i].name}', '${dessert[i].descripton}', '${dessert[i].price}')" class="food">
+            <div>
+                <div class="foodName"><b>${dessert[i].name}</b></div>
+                <div class="foodPrice"><b>${dessert[i].price.toFixed(2)} CHF</b></div>
+            </div>
+            <div class="dishPlus">
+                <img src="./img/plus.png" alt="">
+            </div>
+        </div>
+        `;
     }
+}
+
+
+function addMenu(name, descripton, price) {
+    let index = foods.indexOf(name);
+    if(index == -1){
+        foods.push(name);
+        prices.push(price);
+        menuDescripton.push(descripton);
+        amounts.push(1);
+    }else {
+        amounts[index]++; 
+    }
+
+    renderBasket();
+    updateShoppingBasket();
+    save();
 }
 
 
@@ -99,23 +133,6 @@ function updateShoppingBasket() {
  `;
     responsiveBtn(total);
     }
-}
-
-
-function addMenu(name, descripton, price) {
-    let index = foods.indexOf(name);
-    if(index == -1){
-        foods.push(name);
-        prices.push(price);
-        menuDescripton.push(descripton);
-        amounts.push(1);
-    }else {
-        amounts[index]++; 
-    }
-
-    renderBasket();
-    updateShoppingBasket();
-    save();
 }
     
 
@@ -320,14 +337,13 @@ function inputEmpty() {
 /* ---------- Responsive Btn ----------*/
 
 function closeResposiveBasket() {
-    let closeResposiveBasket = document.getElementById('warenkorb2');
+    let closeResposiveBasket = document.getElementById('warenkorbResponsive');
     closeResposiveBasket.classList.add('dNone');
 
-    responsiveBtn();
 }
 
 function openResponsiveBtn() {
-    let openResponsiveBtn = document.getElementById('warenkorb2');
+    let openResponsiveBtn = document.getElementById('warenkorbResponsive');
     let closeResponsive = document.getElementById('closeResposiveBasket');
 
     openResponsiveBtn.classList.remove('dNone');
@@ -337,16 +353,9 @@ function openResponsiveBtn() {
 
 function responsiveBtn(total) {
     let button = document.getElementById('responsiveBtn');
-
-    if(amounts == 0) {
-        alert('verbergen');
-        document.getElementById('closeResponsiveBtn').classList.add('dNone');
-    }else {
-        alert('haha')
     button.innerHTML = /*html*/ `
-    <div id="closeResponsiveBtn" class="responsiveBtn">
+    <div class="responsiveBtn">
         <button>Warenkorb (${total} CHF)</button>
     </div>  
     `;
-    }
 }

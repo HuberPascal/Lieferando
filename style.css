@@ -110,7 +110,7 @@ nav {
     display: flex;
 }
 
-#warenkorb2 {
+#warenkorbResponsive {
     width: 30%;
     height: 100vh;
     position: sticky;
