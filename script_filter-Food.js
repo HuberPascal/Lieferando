@@ -44,19 +44,16 @@ function searchImgVorspeisen() {
 function searchVorspeisen(i) {
     return /*html*/ `
     <div onclick="addMenu('${vorspeisen[i].name}', '${vorspeisen[i].descripton}', '${vorspeisen[i].price}')" class="food">
-    <div>
-        <div class="foodName"><b>${vorspeisen[i].name}</b></div>
-        <div class="foodDescripton">${vorspeisen[i].descripton}</div>
-        <div class="foodPrice"><b>${vorspeisen[i].price.toFixed(2)} CHF</b></div>
-    </div>
+        <div>
+            <div class="foodName"><b>${vorspeisen[i].name}</b></div>
+            <div class="foodDescripton">${vorspeisen[i].descripton}</div>
+            <div class="foodPrice"><b>${vorspeisen[i].price.toFixed(2)} CHF</b></div>
+        </div>
 
-    <div id="a" class="dishPlus">
-        <img src="./img/plus.png" alt="">
+        <div class="dishPlus">
+            <img src="./img/plus.png" alt="">
+        </div>
     </div>
-    <div id="b" class="dishNumber dNone">
-        <b>${amounts[i]}</b>
-    </div>
-</div>
 `;
 }
 
@@ -78,19 +75,16 @@ function searchImgSalat() {
 function searchImgSalat(i) {
     return /*html*/`
     <div onclick="addMenu('${salat[i].name}', '${salat[i].descripton}', '${salat[i].price}')" class="food">
-    <div>
-        <div class="foodName"><b>${salat[i].name}</b></div>
-        <div class="foodDescripton">${salat[i].descripton}</div>
-        <div class="foodPrice"><b>${salat[i].price.toFixed(2)} CHF</b></div>
-    </div>
+        <div>
+            <div class="foodName"><b>${salat[i].name}</b></div>
+            <div class="foodDescripton">${salat[i].descripton}</div>
+            <div class="foodPrice"><b>${salat[i].price.toFixed(2)} CHF</b></div>
+        </div>
 
-    <div id="a" class="dishPlus">
-        <img src="./img/plus.png" alt="">
-    </div>
-    <div id="b" class="dishNumber dNone">
-        <b>${amounts[i]}</b>
-    </div>
-</div>
+        <div class="dishPlus">
+            <img src="./img/plus.png" alt="">
+        </div>
+    </div>      
 `;
 }
 
@@ -112,19 +106,16 @@ function searchImgPasta() {
 function searchPasta(i) {
     return /*html*/ `
     <div onclick="addMenu('${pasta[i].name}', '${pasta[i].descripton}', '${pasta[i].price}')" class="food">
-    <div>
-        <div class="foodName"><b>${pasta[i].name}</b></div>
-        <div class="foodDescripton">${pasta[i].descripton}</div>
-        <div class="foodPrice"><b>${pasta[i].price.toFixed(2)} CHF</b></div>
-    </div>
+        <div>
+            <div class="foodName"><b>${pasta[i].name}</b></div>
+            <div class="foodDescripton">${pasta[i].descripton}</div>
+            <div class="foodPrice"><b>${pasta[i].price.toFixed(2)} CHF</b></div>
+        </div>
 
-    <div id="a" class="dishPlus">
-        <img src="./img/plus.png" alt="">
+        <div class="dishPlus">
+            <img src="./img/plus.png" alt="">
+        </div>
     </div>
-    <div id="b" class="dishNumber dNone">
-        <b>${amounts[i]}</b>
-    </div>
-</div>
 `;
 }
 
@@ -146,19 +137,16 @@ function searchImgFLeischgerichte() {
 function searchImgFLeischgerichte(i) {
     return /*html*/ `
     <div onclick="addMenu('${fleischgerichte[i].name}', '${fleischgerichte[i].descripton}', '${fleischgerichte[i].price}')" class="food">
-    <div>
-        <div class="foodName"><b>${fleischgerichte[i].name}</b></div>
-        <div class="foodDescripton">${fleischgerichte[i].descripton}</div>
-        <div class="foodPrice"><b>${fleischgerichte[i].price.toFixed(2)} CHF</b></div>
-    </div>
+        <div>
+            <div class="foodName"><b>${fleischgerichte[i].name}</b></div>
+            <div class="foodDescripton">${fleischgerichte[i].descripton}</div>
+            <div class="foodPrice"><b>${fleischgerichte[i].price.toFixed(2)} CHF</b></div>
+        </div>
 
-    <div id="a" class="dishPlus">
-        <img src="./img/plus.png" alt="">
+        <div class="dishPlus">
+            <img src="./img/plus.png" alt="">
+        </div>
     </div>
-    <div id="b" class="dishNumber dNone">
-        <b>${amounts[i]}</b>
-    </div>
-</div>
 `;
 }
 
@@ -180,18 +168,15 @@ function searchImgDessert() {
 function searchImgDessert(i) {
     return /*html*/ `
     <div onclick="addMenu('${dessert[i].name}', '${dessert[i].descripton}', '${dessert[i].price}')" class="food">
-    <div>
-        <div class="foodName"><b>${dessert[i].name}</b></div>
-        <div class="foodPrice"><b>${dessert[i].price.toFixed(2)} CHF</b></div>
-    </div>
+        <div>
+            <div class="foodName"><b>${dessert[i].name}</b></div>
+            <div class="foodPrice"><b>${dessert[i].price.toFixed(2)} CHF</b></div>
+        </div>
 
-    <div id="a" class="dishPlus">
-        <img src="./img/plus.png" alt="">
+        <div class="dishPlus">
+            <img src="./img/plus.png" alt="">
+        </div>
     </div>
-    <div id="b" class="dishNumber dNone">
-        <b>${amounts[i]}</b>
-    </div>
-</div>
 `;
 }
 

@@ -58,27 +58,10 @@ function renderFleischgerichte() {
 
 function renderDessert() {
     let foodcards = document.getElementById('dessert');
-    foodcards.innerHTML = renderDessertImg()
-    /*html*/ ` 
-    <div class="mainFoodImg">
-        <img src="./img/dessert.avif" alt="" />
-    </div>     
-
-    <h4>Dessert</h4>
-    `;
-
+    foodcards.innerHTML = renderDessertImg();
+    
     for (let i = 0; i < dessert.length; i++) {
-        foodcards.innerHTML += /*html*/ `
-        <div onclick="addMenu('${dessert[i].name}', '${dessert[i].descripton}', '${dessert[i].price}')" class="food">
-            <div>
-                <div class="foodName"><b>${dessert[i].name}</b></div>
-                <div class="foodPrice"><b>${dessert[i].price.toFixed(2)} CHF</b></div>
-            </div>
-            <div class="dishPlus">
-                <img src="./img/plus.png" alt="">
-            </div>
-        </div>
-        `;
+        foodcards.innerHTML += renderDessertCards(i);
     }
 }
 
@@ -93,7 +76,6 @@ function addMenu(name, descripton, price) {
     }else {
         amounts[index]++; 
     }
-
     renderBasket();
     updateShoppingBasket();
     save();
@@ -124,13 +106,8 @@ function updateShoppingBasket() {
        let total = total0.toFixed(2);
        
     let warenkorb = document.getElementById('warenkorbSumme');
-    warenkorb.innerHTML = /*html*/ `
-    <div class="calculatorCard">  
-            <p class="sumPayContainer">Zwischensumme<span>${total} CHF</span></p>
-            <p class="sumPayContainer">Lieferkosten<span class="green">Kostenlos</span></p>
-            <button class="payButton">Bezahlen (${total} CHF)</button>    
-    </div> 
- `;
+    warenkorb.innerHTML = shoppingBasketUpdate(total);
+    
     responsiveBtn(total);
     }
 }
@@ -181,16 +158,7 @@ function loadWarenkorb() {
     responsiveWarenkorb.innerHTML = '';
 
     if(renderEmptyBasket()) {
-        warenkorb.innerHTML = /*html*/ `
-        <img src="./img/tasche.png" alt=""/>
-        <b class="marginTop">Fülle deinen Warenkorb</b>
-        <br/>
-        <span
-            >Füge einige leckere Gerichte aus der Speisekarte hinzu
-            und bestelle dein Essen.
-        </span>
-        `;
-
+        warenkorb.innerHTML = loadingWarenkorb();
     }else {
         renderBasket();
         updateShoppingBasket();
@@ -219,7 +187,7 @@ function filterMenuVorspeisen() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
     let menu = document.getElementById('vorspeise');
-    menu.innerHTML = '';
+    // menu.innerHTML = '';
    
     for (let i = 0; i < vorspeisen.length; i++) {
         if(vorspeisen[i].name.toString().toLowerCase().includes(searchInput)) {
@@ -332,8 +300,9 @@ function getMenuFromInput() {
 function inputEmpty() {
     let input = document.getElementById('searchInput').value;
     if(input == '') {
+        alert('leer') ///////////////////////////////////////////////////////////////////////////////////////
         render();
-    }
+}
 }
 
 

@@ -20,3 +20,27 @@ function loadBasket(i, total) {
         </div>
         `;     
 }
+
+
+function shoppingBasketUpdate(total) {
+    return /*html*/ `
+    <div class="calculatorCard">  
+            <p class="sumPayContainer">Zwischensumme<span>${total} CHF</span></p>
+            <p class="sumPayContainer">Lieferkosten<span class="green">Kostenlos</span></p>
+            <button class="payButton">Bezahlen (${total} CHF)</button>    
+    </div> 
+ `;
+}
+
+
+function loadingWarenkorb() {
+    return /*html*/ `
+    <img src="./img/tasche.png" alt=""/>
+    <b class="marginTop">Fülle deinen Warenkorb</b>
+    <br/>
+    <span
+        >Füge einige leckere Gerichte aus der Speisekarte hinzu
+        und bestelle dein Essen.
+    </span>
+    `;
+}
