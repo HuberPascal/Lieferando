@@ -72,7 +72,7 @@ function searchImgSalat() {
 }
 
 
-function searchImgSalat(i) {
+function searchSalat(i) {
     return /*html*/`
     <div onclick="addMenu('${salat[i].name}', '${salat[i].descripton}', '${salat[i].price}')" class="food">
         <div>
@@ -134,7 +134,7 @@ function searchImgFLeischgerichte() {
 }
 
 
-function searchImgFLeischgerichte(i) {
+function searchFLeischgerichte(i) {
     return /*html*/ `
     <div onclick="addMenu('${fleischgerichte[i].name}', '${fleischgerichte[i].descripton}', '${fleischgerichte[i].price}')" class="food">
         <div>
@@ -165,7 +165,7 @@ function searchImgDessert() {
 }
 
 
-function searchImgDessert(i) {
+function searchDessert(i) {
     return /*html*/ `
     <div onclick="addMenu('${dessert[i].name}', '${dessert[i].descripton}', '${dessert[i].price}')" class="food">
         <div>

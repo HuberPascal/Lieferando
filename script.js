@@ -187,7 +187,7 @@ function filterMenuVorspeisen() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
     let menu = document.getElementById('vorspeise');
-    // menu.innerHTML = '';
+    menu.innerHTML = '';
    
     for (let i = 0; i < vorspeisen.length; i++) {
         if(vorspeisen[i].name.toString().toLowerCase().includes(searchInput)) {
@@ -201,14 +201,13 @@ function filterMenuVorspeisen() {
 function filterMenuSalat() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
-    console.log(searchInput);
     let menu = document.getElementById('salat');
     menu.innerHTML = '';
 
     for (let i = 0; i < salat.length; i++) {
         if(salat[i].name.toString().toLowerCase().includes(searchInput)) {
             menu.innerHTML = searchImgSalat();           
-            menu.innerHTML += searchImgSalat(i);
+            menu.innerHTML += searchSalat(i);
         }
     }
 }
@@ -217,7 +216,6 @@ function filterMenuSalat() {
 function filterMenuPasta() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
-    console.log(searchInput);
     let menu = document.getElementById('pasta');
     menu.innerHTML = '';
 
@@ -233,14 +231,13 @@ function filterMenuPasta() {
 function filterMenuFleischgerichte() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
-    console.log(searchInput);
     let menu = document.getElementById('fleischgerichte');
     menu.innerHTML = '';
 
     for (let i = 0; i < fleischgerichte.length; i++) {
         if(fleischgerichte[i].name.toString().toLowerCase().includes(searchInput)) {
             menu.innerHTML = searchImgFLeischgerichte();            
-            menu.innerHTML += searchImgFLeischgerichte(i);
+            menu.innerHTML += searchFLeischgerichte(i);
         } 
     }
 }
@@ -249,14 +246,13 @@ function filterMenuFleischgerichte() {
 function filterMenuDessert() {
     let searchInput = getMenuFromInput();
     searchInput = searchInput.toLowerCase();
-    console.log(searchInput);
     let menu = document.getElementById('dessert');
     menu.innerHTML = '';
 
     for (let i = 0; i < dessert.length; i++) {
-        if(dessert[i].name.toString().toLowerCase().includes(searchInput)) {
+        if(dessert[i].name.toLowerCase().includes(searchInput)) {
             menu.innerHTML = searchImgDessert();
-            menu.innerHTML += searchImgDessert(i);
+            menu.innerHTML += searchDessert(i);
         } 
     }
 }
@@ -300,7 +296,6 @@ function getMenuFromInput() {
 function inputEmpty() {
     let input = document.getElementById('searchInput').value;
     if(input == '') {
-        alert('leer') ///////////////////////////////////////////////////////////////////////////////////////
         render();
 }
 }
